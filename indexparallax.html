@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Fotogenia Web</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <style>
+
+.flip3D{ width:240px; height:200px; margin:10px; float:left; }
+.flip3D > .front{
+    position:absolute;
+    -webkit-transform: perspective( 600px ) rotateY( 0deg );
+    transform: perspective( 600px ) rotateY( 0deg );
+    background:blue; width:240px; height:200px; border-radius: 7px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: -webkit-transform .5s linear 0s;
+    transition: transform .5s linear 0s;
+    background-image:url("img/antes1.png");
+}
+.flip3D > .back{
+    position:absolute;
+    -webkit-transform: perspective( 600px ) rotateY( 180deg );
+    transform: perspective( 600px ) rotateY( 180deg );
+    background: #80BFFF; width:240px; height:200px; border-radius: 7px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: -webkit-transform .5s linear 0s;
+    transition: transform .5s linear 0s;
+    background-image:url("img/despues1.png");
+}
+.flip3D:hover > .front{
+    -webkit-transform: perspective( 600px ) rotateY( -180deg );
+    transform: perspective( 600px ) rotateY( -180deg );
+}
+.flip3D:hover > .back{
+    -webkit-transform: perspective( 600px ) rotateY( 0deg );
+    transform: perspective( 600px ) rotateY( 0deg );
+}
+</style>
+
+
+
+
+</head>
+<body>
+
+    <div id="wrapper">
+<header id="top">
+  <nav id="mainnav">
+   <ul id="barra" class="animated fadeInDown" >
+   <li><a href="parallax.html" class="thispage">Inicio</a></li>
+   <li><a href="galeria.html" >Galeria</a></li>
+   <li><a href="servicios.html">Servicios</a></li>
+   <li><a href="contacto.html">Contacto</a></li>
+   <li><a href="index.html">prueba</a></li>
+   </ul>
+  </nav>
+</header>
+
+        <section id="bloque1">
+
+            <img id="logo" src="img/foogn.png" alt="logo" class="animated flipInX"/>
+            <h1 style="font-family:tradegothic" class="animated fadeInLeft">fotogenia</h1>
+    
+        </section>
+
+        <section id="bloque2">
+
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+        </section>
+
+
+        <section id="bloque3">
+
+            <h2>FER</h2>
+
+
+     <div class="flip3D fadeInDown animated" data-wow-delay="1s">
+   <div class="back">FOTOGENIA</div>
+   <div class="front">BLA BLA BLAB LABLA</div>
+</div>
+
+
+
+
+
+        </section>
+
+
+        <section id="bloque4">
+
+            <h2>GRACIAS!</h2>
+           
+        </section>
+
+    </div>
+
+<footer>Fercasti 2015.</footer>
+
+<script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+</body>
+</html>
